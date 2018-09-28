@@ -3,6 +3,11 @@
  *
  */
 
+
+'use strict';
+
+import {check, informationAboutTheNumber} from "./greeting_realization";
+
 /**
  *
  * 2. Создать страницу, которая спрашивает у пользователя имя, а затем приветствует его.
@@ -41,12 +46,15 @@ else {
  *
  */
 
-const number = +prompt("Введите число от 1 до 100", "1");
 
-function isNumber(number){
-    return typeof number==='number';
+/**
+ * Функция запрашивающая у пользователя число и записывающая в переменную userNumber
+ * @returns {number}
+ */
 
-    if(isNumber(number)!=='number'|| number < 1 || number > 100){
-    alert()
-}
+const userNumber = +prompt("Введите число от 1 до 100", "1");
+check();
+informationAboutTheNumber();
+
+
 
